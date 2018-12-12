@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
-import javax.faces.event.ValueChangeEvent;
+//import javax.faces.event.ValueChangeEvent;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
@@ -112,7 +112,7 @@ public class TransferBean
 		this.destinationAccountDescription = destinationAccountDescription;
 	}
 
-	public void updateSourceAccounts(ValueChangeEvent event) {
+	/*public void updateSourceAccounts(ValueChangeEvent event) {
     	this.sourceClientName = (String)event.getNewValue();
     	
 	    List<Account> accounts = bank.getAccountListFromClientLastname(this.sourceClientName);
@@ -130,6 +130,7 @@ public class TransferBean
 			this.destinationAccountDescriptions.add(account.getDescription());
 		}
     }
+    */
 
     public List<Client> getClients() {
 		return clients;
