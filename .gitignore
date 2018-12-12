@@ -22,10 +22,8 @@
 # Target
 target/*
 
-# Eclipse
+#Eclipse
 .settings/*
-.metadata/*
-.classpath
 
 # IntelliJ
 .idea/*
