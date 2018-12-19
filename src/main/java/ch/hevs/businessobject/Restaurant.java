@@ -1,5 +1,7 @@
 package ch.hevs.businessobject;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -91,6 +93,11 @@ public class Restaurant {
 
 	public void setOwner(Owner owner) {
 		this.owner = owner;
+	}
+	
+	public void addRating(Rating rating)
+	{
+		this.ratings.add(rating);
 	}
 	
 }
