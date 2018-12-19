@@ -60,5 +60,15 @@ public class Owner {
 		this.restaurants = restaurants;
 	}
 	
+	public void addRestaurant(Restaurant restaurant)
+	{
+		this.restaurants.add(restaurant);
+	}
+	
+	public void removeRestaurant(Restaurant restaurant)
+	{
+		this.restaurants.remove(restaurant);
+	}
+	
 	
 }

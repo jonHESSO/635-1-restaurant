@@ -95,4 +95,9 @@ public class Restaurant {
 		this.owner = owner;
 	}
 	
+	public void addRating(Rating rating)
+	{
+		this.ratings.add(rating);
+	}
+	
 }

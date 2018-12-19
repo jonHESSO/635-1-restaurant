@@ -7,22 +7,31 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name="Menu")
 public class Menu {
 	
-
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	
+	private long id;
 	@Column(name="contenu")
-	private String content;
+	private String content;		
 	
+	public Menu() {
+		
+	}
 	
-	
-	
+	public Menu(String content) {
+		this.content = content;
+	}	
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	public String getContent() {
 		return content;
 	}
