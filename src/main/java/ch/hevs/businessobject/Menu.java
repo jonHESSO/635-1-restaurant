@@ -13,7 +13,6 @@ public class Menu {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
-	@Column(name="contenu")
 	private String content;		
 	
 	public Menu() {
