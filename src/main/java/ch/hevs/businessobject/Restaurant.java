@@ -23,7 +23,11 @@ public class Restaurant {
 	private String name;
 	private String adress;
 	private String city ;
+<<<<<<< HEAD
 	@OneToMany(cascade = CascadeType.ALL)  //uni-directional 1-n mapping
+=======
+	@OneToMany  //uni-directional 1-n mapping
+>>>>>>> refs/remotes/origin/master
 	private List<Rating> ratings ;
 	@OneToOne  //uni-direction 0-1 mapping
 	@JoinColumn(name = "FK_MENU", nullable = true)

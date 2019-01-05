@@ -1,6 +1,24 @@
 package ch.hevs.starservice;
 
+<<<<<<< HEAD
+=======
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.faces.event.ValueChangeEvent;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+
+import ch.hevs.businessobject.*;
+
+
+public class AdminBean {
+>>>>>>> refs/remotes/origin/master
+
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
@@ -100,4 +118,19 @@ public class AdminBean implements Admin{
 	}
 
 		
+=======
+	
+	
+	private List<Restaurant> restaurants;
+	private List<String> retaurantName;
+	private List<Owner> owners;
+	private List<String> ownerName;
+	private List<Rating> ratings;
+	private List<Menu> menus;
+	private List<String> menuName;
+	
+	
+	
+	
+>>>>>>> refs/remotes/origin/master
 }
