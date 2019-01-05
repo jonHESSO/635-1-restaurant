@@ -10,10 +10,7 @@ import javax.persistence.Persistence;
 import org.junit.Test;
 
 import ch.hevs.businessobject.Owner;
-<<<<<<< HEAD
 import ch.hevs.businessobject.Rating;
-=======
->>>>>>> refs/remotes/origin/master
 import ch.hevs.businessobject.Restaurant;
 
 public class EntitiesTest {
@@ -43,7 +40,6 @@ public class EntitiesTest {
 		catch(Exception e)
 		{
 			e.printStackTrace(System.out);
-<<<<<<< HEAD
 			tx.rollback();
 		}
 	}
@@ -98,8 +94,6 @@ public class EntitiesTest {
 		catch(Exception e)
 		{
 			e.printStackTrace();
-=======
->>>>>>> refs/remotes/origin/master
 			tx.rollback();
 		}
 	}
