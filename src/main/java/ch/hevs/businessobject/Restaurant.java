@@ -1,7 +1,10 @@
 package ch.hevs.businessobject;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,8 +23,8 @@ public class Restaurant {
 	private String name;
 	private String adress;
 	private String city ;
-	@OneToMany  //uni-directional 1-n mapping
-	private Set<Rating> ratings ;
+	@OneToMany(cascade = CascadeType.ALL)  //uni-directional 1-n mapping
+	private List<Rating> ratings ;
 	@OneToOne  //uni-direction 0-1 mapping
 	@JoinColumn(name = "FK_MENU", nullable = true)
 	private Menu menu ;	
@@ -30,6 +33,7 @@ public class Restaurant {
 	private Owner owner ;
 	
 	public Restaurant() {
+		this.ratings = new ArrayList<Rating>();
 	}
 
 	public Restaurant(String name, String adress, String city, Owner owner) {
@@ -37,6 +41,7 @@ public class Restaurant {
 		this.adress = adress;
 		this.city = city;
 		this.owner = owner;
+		this.ratings = new ArrayList<Rating>();
 	}
 
 	public long getId() {
@@ -71,11 +76,11 @@ public class Restaurant {
 		this.city = city;
 	}
 
-	public Set<Rating> getRatings() {
+	public List<Rating> getRatings() {
 		return ratings;
 	}
 
-	public void setRatings(Set<Rating> ratings) {
+	public void setRatings(List<Rating> ratings) {
 		this.ratings = ratings;
 	}
 

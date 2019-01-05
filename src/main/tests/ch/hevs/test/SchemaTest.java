@@ -10,7 +10,7 @@ import org.junit.Test;
 public class SchemaTest extends TestCase {
 
 	@Test
-	public void test() {
+	public void testSchema() {
 
 		Configuration cfg = new Configuration();
 		cfg.addAnnotatedClass(ch.hevs.businessobject.Owner.class);
