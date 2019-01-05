@@ -1,5 +1,7 @@
 package ch.hevs.businessobject;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -18,14 +20,16 @@ public class Owner {
 	private String name ;
 	private String email;	
 	@OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)  //bi-directional 1-n mapping
-	private Set<Restaurant> restaurants;
+	private List<Restaurant> restaurants;
 	
 	public Owner() {
+		this.restaurants = new ArrayList<Restaurant>();
 	}
 
 	public Owner(String name, String email) {
 		this.name = name;
 		this.email = email;
+		this.restaurants = new ArrayList<Restaurant>();
 	}
 
 	public long getId() {
@@ -52,11 +56,11 @@ public class Owner {
 		this.email = email;
 	}
 
-	public Set<Restaurant> getRestaurants() {
+	public List<Restaurant> getRestaurants() {
 		return restaurants;
 	}
 
-	public void setRestaurants(Set<Restaurant> restaurants) {
+	public void setRestaurants(List<Restaurant> restaurants) {
 		this.restaurants = restaurants;
 	}
 	

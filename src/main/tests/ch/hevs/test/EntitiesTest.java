@@ -8,11 +8,12 @@ import javax.persistence.Persistence;
 import org.junit.Test;
 
 import ch.hevs.businessobject.Owner;
+import ch.hevs.businessobject.Restaurant;
 
 public class EntitiesTest {
 	
 	@Test
-	public void test() {
+	public void testInsertion() {
 		EntityTransaction tx = null;
 		try {
 			
@@ -23,14 +24,19 @@ public class EntitiesTest {
 			
 			Owner owner = new Owner() ;
 			owner.setEmail("email");
-			owner.setName("jon");
-			System.out.println(owner.getEmail());
+			owner.setName("flush");
 			em.persist(owner);
+			Restaurant restaurant = new Restaurant("resto","Rue de la rue","Sion", owner);
+			owner.addRestaurant(restaurant);
+			em.flush();
+			System.out.println(owner.getEmail());
+			
 			
 			tx.commit();
 		}
 		catch(Exception e)
 		{
+			e.printStackTrace(System.out);
 			tx.rollback();
 		}
 	}

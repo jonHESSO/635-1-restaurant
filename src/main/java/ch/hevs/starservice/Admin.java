@@ -20,7 +20,7 @@ public interface Admin {
 	public void deleteRestaurant(String restaurantName);
 	public void createRestaurant(Restaurant restaurant);
 	
-	public Restaurant getMenu(String restaurantName);
+	public Menu getMenu(String restaurantName);
 	public void editMenu(Menu menu);
 	public void deleteMenu(String restaurantName);
 	public void createMenu(Menu menu, String restaurantName);
