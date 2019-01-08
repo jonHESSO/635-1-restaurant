@@ -97,5 +97,29 @@ public class EntitiesTest {
 			tx.rollback();
 		}
 	}
+	
+	@Test
+	public void testSelect(){
+		
+		EntityTransaction tx = null;
+		try {
+			
+			EntityManagerFactory emf = Persistence.createEntityManagerFactory("StarPU");
+			EntityManager em = emf.createEntityManager();
+			tx = em.getTransaction();
+			tx.begin();
+			List<Restaurant> restaurants = em.createQuery("FROM Restaurant").getResultList();
+			for (Restaurant restaurant : restaurants) {
+				System.out.println(restaurant.getName());
+			}
+			tx.commit();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			tx.rollback();
+		}
+		
+	}
 
 }

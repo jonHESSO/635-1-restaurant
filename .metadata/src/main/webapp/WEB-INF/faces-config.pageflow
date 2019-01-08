@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14141592409490" configfile="/TP12-WEB-EJB-PC-EPC-E-donnee/src/main/webapp/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14141592409490" configfile="/635-1-restaurant/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="welcomeBank.xhtml" x="122" y="178" id="pf15469378574840" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15469378574841" path="/welcomeBank.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="transferForm.xhtml" x="338" y="178" id="pf15469378574842" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf15469378574843" inlinks="pf15469378574841" path="/transferForm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="showTransferResult.xhtml" x="554" y="178" id="pf15469378574844" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf15469378574843" path="/showTransferResult.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="showRestaurants.xhtml" x="137" y="381" id="pf15469378574845" path="/showRestaurants.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="showRestaurantDetails.xhtml" x="434" y="403" id="pf15469378574846" path="/showRestaurantDetails.xhtml"/>
+  <links id="pf15469378574841" target="pf15469378574842" source="pf15469378574840" outcome="transferForm"/>
+  <links id="pf15469378574843" target="pf15469378574844" source="pf15469378574842" outcome="#{transferBean.performTransfer}"/>
+</pageflow:Pageflow>
